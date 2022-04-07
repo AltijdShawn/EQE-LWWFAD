@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <title>Listing</title>
+    <link rel="stylesheet" href="css/list.page.css">
+</head>
+
+<body>
+    <section id="list">
+        <% for (let i=0; i < idList.length; i++) { %>
+            <% if (idList[i]=="Placeholder" ) continue; %>
+                <header>
+                    <span class="id"><%= idList[i] %></span>
+                    <span class="name"><%= nameList[i] %></span>
+                    <span class="country"><%= countryList[i] %></span>
+                    <a href="/view/<%= idList[i] %>" id="entry">
+                        Go
+                    </a>
+                    <a href="/view/<%= idList[i] %>/json" id="entry" class="data">
+                        Data
+                    </a>
+                </header><br/>
+        <% } %>
+    </section>
+</body>
+
+</html>

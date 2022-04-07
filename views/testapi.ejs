@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=`, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const questions = {
+        id: prompt("Enter the ID of the post you want to view: "),
+        dataType: prompt("Enter the data type you want to view: "),
+      };
+      fetch(`http://localhost:8000/view/${questions.id}/json`, {
+        method: "Get",
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          const data = json.post;
+          console.log(data[questions.dataType]);
+        });
+    </script>
+  </body>
+</html>

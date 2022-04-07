@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>Visual data</title>
+    <link rel="stylesheet" href="/css/view.page.css" />
+  </head>
+  <div class="container">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          value="<%= data.firstname -%>"
+          readonly
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          value="<%= data.lastname -%>"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="text"
+          id="country"
+          name="country"
+          value="<%= data.country -%>"
+          readonly
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" style="height: 200px" readonly>
+        <%= data.subject -%>
+        </textarea>
+      </div>
+    </div>
+  </div>
+</html>
